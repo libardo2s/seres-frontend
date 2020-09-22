@@ -24,7 +24,7 @@ import AttachMoney from '@material-ui/icons/AttachMoney';
 import StoreIcon from '@material-ui/icons/Store';
 import ExitToApp from '@material-ui/icons/ExitToApp';
 import Avatar from '@material-ui/core/Avatar';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'; 
 import '../App.css';
 
 class Header extends React.Component{
@@ -108,6 +108,12 @@ class Header extends React.Component{
                         </Link>
                     </ListItem>
                     <ListItem button>
+                        <ListItemIcon><DirectionsCar style={{color: '#50555a'}}/></ListItemIcon>
+                        <Link to="/views/Mapa">
+                            <ListItemText primary="Mapa de Servicios" />
+                        </Link>
+                    </ListItem>
+                    <ListItem button>
                         <ListItemIcon><AttachMoney style={{color: '#50555a'}}/></ListItemIcon>
                         <Link to="/views/Precio">
                             <ListItemText primary="Nuevas Tarifa" />
@@ -187,4 +193,4 @@ class Header extends React.Component{
         );
     }
 }
-export default Header;            
+export default Header;
