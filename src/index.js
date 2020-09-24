@@ -20,6 +20,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Precio from './views/Precio';
 import Banderazo from './views/banderazo';
+import Mapa from './views/Mapa';
 
 const routing = (
   <Router>
@@ -39,6 +40,7 @@ const routing = (
       <Route path="/views/Agregar_perfil" component={Agregar_perfil} /> 
       <Route path="/views/Precio" component={Precio} />
       <Route path="/views/Banderazo" component={Banderazo} />
+      <Route path="/views/Mapa" component={Mapa} />
    </Provider>
   </Router>
 )
