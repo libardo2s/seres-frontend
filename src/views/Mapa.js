@@ -68,9 +68,20 @@ class Mapa extends Component {
         carga: false,
         mascota: false,
         pasajeros: this.state.numero_pasajero,
-        descripcion: this.state.descripcion
+        descripcion: `Preguntar por ${this.state.usuarios}. ${this.state.descripcion}`
       })
-    })
+    }).then(
+      response => { this.setState({ 
+        show: false,
+        origen: "",
+        destino: "",
+        usuarios: "",
+        descripcion: "",
+        numero_pasajero: "" 
+  })},
+      error => {
+        console.error(error);
+      });
 
   }
 
@@ -184,17 +195,15 @@ class Mapa extends Component {
                 </Modal>
         <Header history={this.props.history}/>
         <Map google={this.props.google}
-          initialCenter={{
-            lat: 10.474639,
-            lng: -73.2616842
-          }}
+          initialCenter={{lat: 10.474639,lng: -73.2616842 }}
           zoom={15}>
           {this.state.postMap.map(item => (
-             <Marker key={item.placa} 
-             position={{ lat: item.location.latitud, lng: item.location.longitud}} 
+             <Marker key={item.placa}
+             ico
+             position={{ lat: item.location.latitud, lng: item.location.longitud}}
              title={`${item.nombre} ${item.apellido} ${item.placa}`}
-             onClick={() => this.setState({ show: true, conductor: item })}
-                   
+             onClick={() => this.setState({ show: true, conductor: item })}  
+             icon={item.estado === "Disponible" ? require('../images/taxii.png'): require('../images/taxi1.1.png')}    
              />         
              ))
           }
