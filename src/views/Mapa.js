@@ -67,7 +67,7 @@ class Mapa extends Component {
         discapacidad: false,
         carga: false,
         mascota: false,
-        pasajeros: this.state.numero_pasajero,
+        pasajeros: true,
         descripcion: `Preguntar por ${this.state.usuarios}. ${this.state.descripcion}`
       })
     }).then(
@@ -172,16 +172,6 @@ class Mapa extends Component {
                         </div>
                         <div className="form-group">
                             <TextField
-                            type="number"
-                            label="NUMERO DE PASAJERO"
-                            className="form-control"
-                            value={this.state.numero_pasajero}
-                            onChange={value => this.setState({ numero_pasajero: value.target.value })}
-                            required
-                            margin="normal" />
-                        </div>
-                        <div className="form-group">
-                            <TextField
                             label="DESCRIPCION"
                             className="form-control"
                             value={this.state.descripcion}
@@ -202,8 +192,11 @@ class Mapa extends Component {
              ico
              position={{ lat: item.location.latitud, lng: item.location.longitud}}
              title={`${item.nombre} ${item.apellido} ${item.placa}`}
-             onClick={() => this.setState({ show: true, conductor: item })}  
-             icon={item.estado === "Disponible" ? require('../images/taxii.png'): require('../images/taxi1.1.png')}    
+             onClick={() => {
+               if(item.estado === "Disponible") 
+               this.setState({ show: true, conductor: item })
+             }}  
+             icon={item.estado === "Disponible" ? require('../images/taxi1.1.png'): require('../images/taxii.png')}   
              />         
              ))
           }
