@@ -82,19 +82,19 @@ class Login extends React.Component {
           <div className="row h-100 justify-content-center align-items-center">
             <div className="col-5 shadow-div" style={{ backgroundColor: '#007ED9', borderRadius: 10 }}>
             </div>
-            <Card className="col-5 shadow-div form-container" style={{ backgroundColor: '#ffffff', borderRadius: 10 }}>
+            <Card className="col-5 shadow-div form-container" style={{ backgroundColor: '#ffb6c1', borderRadius: 10 }}>
               <Typography variant="h3" style={{ textAlign: 'center', marginTop: 25 }}>
-                Bienvenidos a
+                Bienvenidos 
               </Typography>
               <Typography variant="h5" style={{ textAlign: 'center', marginBottom: 30 }}>
-                SeresApp
+                S.T.E.M
               </Typography>
-              <form style={{ margin: 10, marginBottom: 20 }} className="needs-validation" onSubmit={this.handleSubmitFormLogin}>
+              <form style={{ margin: 20, marginBottom: 20 }} className="needs-validation" onSubmit={this.handleSubmitFormLogin}>
                 <div className="form-group">
                   <TextField
                     id="usuario"
                     label="Usuario"
-                    className="form-control"
+                    className="form-control" style={{ backgroundColor: '#ffb6c1', borderRadius: 10 }}
                     value={this.state.usuario}
                     onChange={value => this.setState({ usuario: value.target.value })}
                     required
@@ -103,18 +103,18 @@ class Login extends React.Component {
                 <div className="form-group">
                   <TextField
                     type="password"
-                    className="form-control"
-                    id="contrasena"
+                    className="form-control" style={{ backgroundColor: '#ffb6c1', borderRadius: 10 }}
+                    id="contraseña"
                     placeholder="Contraseña"
                     value={this.state.contrasena}
-                    onChange={value => this.setState({ contrasena: value.target.value })}
+                    onChange={value => this.setState({ contrasena: value.target.value })}  /*ojo con la ñ*/
                     required
                     margin="normal" />
                 </div>
                 <div className="row h-100 justify-content-center align-items-center">
                   <Button
                     variant="contained"
-                    color="primary"
+                    color= ''
                     type="submit"
                     style={{ marginBottom: 10, width: '95%' }}>
                     INGRESAR
@@ -124,7 +124,7 @@ class Login extends React.Component {
             </Card>
           </div>
           <SweetAlert
-            type='error'
+           type='error'
             show={this.state.show_error}
             title={this.state.message_error}
             onConfirm={() => this.setState({ show_error: false })} />

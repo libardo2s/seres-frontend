@@ -14,14 +14,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuIcon from '@material-ui/icons/Menu';
-import CheckBox from '@material-ui/icons/CheckBox';
-import LocalAtm from '@material-ui/icons/LocalAtm';
-import BusinessCenter from '@material-ui/icons/BusinessCenter';
-import DirectionsCar from '@material-ui/icons/DirectionsCar';
-import Person from '@material-ui/icons/Person';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import AttachMoney from '@material-ui/icons/AttachMoney';
-import StoreIcon from '@material-ui/icons/Store';
+import SportsEsports from '@material-ui/icons/SportsEsports';
+import ImportContacts from '@material-ui/icons/ImportContacts';
 import ExitToApp from '@material-ui/icons/ExitToApp';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid'; 
@@ -70,7 +64,7 @@ class Header extends React.Component{
                     <Grid style={{marginTop: 20}}>
                         <Typography variant="h5" style={{flexGrow: 1, fontWeight:'bold', color: '#50555a'}}>
                         </Typography>
-                        <Typography variant="subtitle2" style={{flexGrow: 1, color: '#50555a'}}>
+                        <Typography variant="subtitle2" style={{flexGrow: 1, color: '#ffb6c1'}}>
                         <ListItemText primary="usuario"/> 
                         </Typography>
                     </Grid>
@@ -78,57 +72,15 @@ class Header extends React.Component{
                 <Divider/>              
                 <List>
                 <ListItem button>
-                        <ListItemIcon><LocalAtm style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Banderazo">
-                            <ListItemText primary="Banderazo" />
+                        <ListItemIcon><ImportContacts style={{color: '#50555a'}}/></ListItemIcon>
+                        <Link to="/views/Motivacion">
+                            <ListItemText primary="Motívate" />
                         </Link>
                     </ListItem>   
                 <ListItem button>
-                        <ListItemIcon><CheckBox style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Calificaciones">
-                            <ListItemText primary="Calificaciones" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><Person style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Clientes">
-                            <ListItemText primary="Clientes" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><DirectionsCar style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Conductores">
-                            <ListItemText primary="Conductores" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><MonetizationOnIcon style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Contabilidad">
-                            <ListItemText primary="Contabilidad" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><DirectionsCar style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Mapa">
-                            <ListItemText primary="Mapa de Servicios" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><AttachMoney style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Precio">
-                            <ListItemText primary="Nuevas Tarifa" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><StoreIcon style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Servicios">
-                            <ListItemText primary="Servicios" />
-                        </Link>
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon><BusinessCenter style={{color: '#50555a'}}/></ListItemIcon>
-                        <Link to="/views/Control">
-                            <ListItemText primary="Administrador de Perfiles" />
+                        <ListItemIcon><SportsEsports style={{color: '#50555a'}}/></ListItemIcon>
+                        <Link to="/views/Juegos">
+                            <ListItemText primary="Aprende Jugando" />
                         </Link>
                     </ListItem>
                 </List>    
@@ -142,10 +94,10 @@ class Header extends React.Component{
                 <AppBar position="static" color="default">
                     <Toolbar>
                     <IconButton onClick={()=> this.setState({left: true})} edge="start" color="inherit" aria-label="menu">
-                        <MenuIcon style={{color: '#3f51b5'}}/>
+                        <MenuIcon style={{color: '#ffb6c1'}}/>
                     </IconButton>
-                    <Typography variant="h5" style={{flexGrow: 1, fontWeight:'bold', color:'#3f51b5'}}>
-                        SeresApp
+                    <Typography variant="h5" style={{flexGrow: 1, fontWeight:'bold', color:'#ffb6c1'}}>
+                        S.T.E.M
                     </Typography>
                     <div>
                         <IconButton
@@ -154,7 +106,7 @@ class Header extends React.Component{
                             aria-haspopup="true"
                             onClick={($event) => this.handleMenu($event)}
                             color="inherit">
-                            <AccountCircle style={{color: '#3f51b5'}}/>
+                            <AccountCircle style={{color: '#ffb6c1'}}/>
                             <Menu
                             style={{padding: 15}}
                             id="menu-appbar"

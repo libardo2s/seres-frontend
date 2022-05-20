@@ -4,43 +4,25 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Login from './views/Login';
 import Main from './views/Main';
-import Control from './views/Control';
-import Calificaciones from './views/Calificaciones';
-import Clientes from './views/Clientes';
-import Conductores from './views/Conductores';
-import Contabilidad from './views/Contabilidad';
-import Notificaciones from './views/Notificaciones';
-import Pago  from './views/Pago';
-import Peticion_ser from './views/Peticion_ser';
-import Reportes from './views/Reportes';
-import Servicios from './views/Servicios'
+import Juegos from './views/Juegos';
+import Industria4 from './views/Industria4.0';
+import Datos from './views/Datos';
+import Stem from './views/Stem';
 import store from './redux/store';
-import Agregar_perfil from './views/Agregar_perfil';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Precio from './views/Precio';
-import Banderazo from './views/banderazo';
-import Mapa from './views/Mapa';
+import Motivacion from './views/Motivacion';
 
 const routing = (
   <Router>
     <Provider store={store}>
-      <Route path="/" component={Login} />
+      <Route path="/" component={Motivacion} />
       <Route path="/dashboard" component={Main} />
-      <Route path="/views/Control" component={Control} />
-      <Route path="/views/Calificaciones" component={Calificaciones} />
-      <Route path="/views/Clientes" component={Clientes} />
-      <Route path="/views/Conductores" component={Conductores} />
-      <Route path="/views/Contabilidad" component={Contabilidad} />
-      <Route path="/views/Notificaciones" component={Notificaciones} />
-      <Route path="/views/Pago" component={Pago} />
-      <Route path="/views/Peticion_ser" component={Peticion_ser} />
-      <Route path="/views/Reportes" component={Reportes} />
-      <Route path="/views/Servicios" component={Servicios} />
-      <Route path="/views/Agregar_perfil" component={Agregar_perfil} /> 
-      <Route path="/views/Precio" component={Precio} />
-      <Route path="/views/Banderazo" component={Banderazo} />
-      <Route path="/views/Mapa" component={Mapa} />
+      <Route path="/views/Juegos" component={Juegos} />
+      <Route path="/views/Industria4.0" component={Industria4} />
+      <Route path="/views/Datos" component={Datos} />
+      <Route path="/views/Stem" component={Stem} /> 
+      <Route path="/views/Motivacion" component={Motivacion} />
    </Provider>
   </Router>
 )
